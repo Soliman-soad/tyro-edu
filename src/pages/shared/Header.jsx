@@ -3,11 +3,14 @@ import { Link, NavLink } from 'react-router-dom';
 const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const activeStyle = {
-		textDecoration: "underline",
+		
+		padding: "5px",
+		borderRadius: "5px",
+    borderBottom: "2px solid #00796B"
 	  };
     return (
         <div className="bg-gray-900">
-      <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+      <div  className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="relative flex items-center justify-between">
           <Link
             to="/"
@@ -20,7 +23,7 @@ const Header = () => {
 				<path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.267A8.25 8.25 0 1120.25 10.5M8.288 14.212A5.25 5.25 0 1117.25 10.5" />
 			</svg>	
 			</span>		
-				<span className='uppercase text-4xl font-bold p-2'>
+				<span className='uppercase text-3xl font-bold p-2'>
 			   		tyro
                 <span className='text-teal-700'> EDU</span>
 			   </span>
@@ -154,7 +157,7 @@ const Header = () => {
 				<path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.267A8.25 8.25 0 1120.25 10.5M8.288 14.212A5.25 5.25 0 1117.25 10.5" />
 			</svg>	
 			</span>		
-				<span className='uppercase text-4xl font-bold p-2'>
+				<span className='uppercase text-3xl font-bold p-2'>
 			   		tyro
                 <span className='text-teal-700'> EDU</span>
 			   </span>
