@@ -41,7 +41,7 @@ const Sidebar = () => {
                       </li>
                       <li>
                         <NavLink
-                          to="/blog"
+                          to="dashboard"
                           aria-label="About us"
                           title="About us"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -49,7 +49,7 @@ const Sidebar = () => {
 						  isActive ? activeStyle : undefined
 						}
 						>
-                          Blog
+                          Dashboard
                         </NavLink>
                       </li>
                       <li>
