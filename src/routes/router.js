@@ -5,12 +5,16 @@ import Login from "../pages/authenticationPages/Login";
 import Register from "../pages/authenticationPages/Register";
 import Blog from "../pages/Blog";
 import Courses from "../pages/Courses";
+import Ai from "../pages/coursesPage/Ai";
 import Course from "../pages/coursesPage/Course";
 import Dashboard from "../pages/coursesPage/Dashboard";
+import Data from "../pages/coursesPage/Data";
 import Instructor from "../pages/coursesPage/Instructor";
+import Iot from "../pages/coursesPage/Iot";
+import Marketing from "../pages/coursesPage/Marketing";
 import Profile from "../pages/coursesPage/Profile";
 import SingleCourse from "../pages/coursesPage/SingleCourse";
-import SpecialBlog from "../pages/coursesPage/SpecialBlog";
+import Web from "../pages/coursesPage/Web";
 import ErrorPage from "../pages/error/ErrorPage";
 import Faq from "../pages/Faq";
 import Home from "../pages/Home";
@@ -44,6 +48,31 @@ const router = createBrowserRouter([
 
                 },
                 {
+                    path:'ai',
+                    element:<Ai/>,
+                    loader: () =>fetch('https://tyro-server.vercel.app/courses')
+                },
+                {
+                    path:'Data',
+                    element:<Data/>,
+                    loader: () =>fetch('https://tyro-server.vercel.app/courses')
+                },
+                {
+                    path:'web',
+                    element:<Web/>,
+                    loader: () =>fetch('https://tyro-server.vercel.app/courses')
+                },
+                {
+                    path:'Iot',
+                    element:<Iot/>,
+                    loader: () =>fetch('https://tyro-server.vercel.app/courses')
+                },
+                {
+                    path:'Marketing',
+                    element:<Marketing/>,
+                    loader: () =>fetch('https://tyro-server.vercel.app/courses')
+                },
+                {
                     path:'profile',
                     element:<Profile/>
                 },
@@ -54,10 +83,6 @@ const router = createBrowserRouter([
                 {
                     path:'instructor',
                     element:<Instructor/>
-                },
-                {
-                    path:"specialBlog",
-                    element:<SpecialBlog/>
                 }
             ]
             },

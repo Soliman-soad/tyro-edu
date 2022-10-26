@@ -1,8 +1,12 @@
 import React from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { MdCategory } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 
 
-const Sidebar = () => {
+const Sidebar = ({category}) => {
+  
     const activeStyle = {
 		background: '#00796B',
 		padding: "5px",
@@ -23,9 +27,30 @@ const Sidebar = () => {
 						  isActive ? activeStyle : undefined
 						}
 						end>
-                          Courses
+                          All
                         </NavLink>
                       </li>
+                      {
+                        category.map(categoryData => {
+                          return(
+                            
+                            <li key={categoryData.id}>
+                        <NavLink
+                          to={categoryData.category}
+                          aria-label="About us"
+                          title="About us"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+						  style={({ isActive }) =>
+						  isActive ? activeStyle : undefined
+						}
+						>
+                          {categoryData.category}
+                        </NavLink>
+                      </li>
+                            
+                          )
+                        })
+                      }
                       <li>
                         <NavLink
                           to="profile"
@@ -65,32 +90,8 @@ const Sidebar = () => {
                           Instructors
                         </NavLink>
                       </li>
-                      <li>
-                        <NavLink
-                          to="specialBlog"
-                          aria-label="About us"
-                          title="About us"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-						  style={({ isActive }) =>
-						  isActive ? activeStyle : undefined
-						}
-						>
-                          Special blog
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                          to="/about"
-                          aria-label="About us"
-                          title="About us"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-						  style={({ isActive }) =>
-						  isActive ? activeStyle : undefined
-						}
-						>
-                          About
-                        </NavLink>
-                      </li>
+                      
+                      
                       
                     </ul>
         </div>
