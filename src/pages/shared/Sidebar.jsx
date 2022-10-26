@@ -79,7 +79,7 @@ const Sidebar = ({category}) => {
                       </li>
                       <li>
                         <NavLink
-                          to="instructor"
+                          to="checkout"
                           aria-label="About us"
                           title="About us"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -87,7 +87,7 @@ const Sidebar = ({category}) => {
 						  isActive ? activeStyle : undefined
 						}
 						>
-                          Instructors
+                          Get premium access
                         </NavLink>
                       </li>
                       

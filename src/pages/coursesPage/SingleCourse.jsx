@@ -1,11 +1,15 @@
 import React from 'react';
+import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Pdf from "react-to-pdf";
+import { ProfileContext } from '../../context/UserContext';
 
 
 const ref = React.createRef();
 const SingleCourse = () => {
     const course = useLoaderData()
+    const {enroll,setEnroll} = useContext(ProfileContext); 
+    console.log(enroll)
     return (
         <div>
             <div ref={ref}  className=" pt-5 w-full  bg-base-100 shadow-xl">
@@ -20,7 +24,7 @@ const SingleCourse = () => {
     <p>{course.details }</p>
     <div className="card-actions justify-end">
 
-      <button className="btn bg-teal-700 text-white border-0 w-full">Enroll</button>
+      <button onClick={()=> setEnroll([...enroll,course.id])} className="btn bg-teal-700 text-white border-0 w-full">Enroll</button>
     </div>
   </div>
 					</div>

@@ -18,6 +18,7 @@ import Web from "../pages/coursesPage/Web";
 import ErrorPage from "../pages/error/ErrorPage";
 import Faq from "../pages/Faq";
 import Home from "../pages/Home";
+import Checkout from "../pages/private/Checkout";
 
 const router = createBrowserRouter([
     {
@@ -83,6 +84,11 @@ const router = createBrowserRouter([
                 {
                     path:'instructor',
                     element:<Instructor/>
+                },
+                {
+                    path:'checkout',
+                    element:<Checkout/>,
+                    loader: () =>fetch('https://tyro-server.vercel.app/courses')
                 }
             ]
             },
