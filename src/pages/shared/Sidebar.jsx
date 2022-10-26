@@ -54,6 +54,19 @@ const Sidebar = () => {
                       </li>
                       <li>
                         <NavLink
+                          to="instructor"
+                          aria-label="About us"
+                          title="About us"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+						  style={({ isActive }) =>
+						  isActive ? activeStyle : undefined
+						}
+						>
+                          Instructors
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
                           to="/about"
                           aria-label="About us"
                           title="About us"

@@ -7,6 +7,7 @@ import Blog from "../pages/Blog";
 import Courses from "../pages/Courses";
 import Course from "../pages/coursesPage/Course";
 import Dashboard from "../pages/coursesPage/Dashboard";
+import Instructor from "../pages/coursesPage/Instructor";
 import Profile from "../pages/coursesPage/Profile";
 import SingleCourse from "../pages/coursesPage/SingleCourse";
 import ErrorPage from "../pages/error/ErrorPage";
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
                 {
                     path:'dashboard',
                     element:<Dashboard/>
+                },
+                {
+                    path:'instructor',
+                    element:<Instructor/>
                 }
             ]
             },
