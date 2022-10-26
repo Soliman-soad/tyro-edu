@@ -6,24 +6,13 @@ const Sidebar = () => {
     const activeStyle = {
 		background: '#00796B',
 		padding: "5px",
-		borderRadius: "5px"
+		borderRadius: "5px",
+    color:'#ffffff'
 	  };
     return (
-        <div>
+        <div className='p-10 bg-white h-screen sticky top-0 hidden md:block'>
             <ul className="space-y-4 ">
-                      <li>
-                        <NavLink
-                          to="/"
-                          aria-label="Our product"
-                          title="Our product"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-						  style={({ isActive }) =>
-						  isActive ? activeStyle : undefined
-						}
-						end>
-                          Home
-                        </NavLink>
-                      </li>
+                      
                       <li>
                         <NavLink
                           to="/courses"
