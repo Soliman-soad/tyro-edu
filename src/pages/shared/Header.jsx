@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { ProfileContext } from '../../context/UserContext';
 const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const activeStyle = {
@@ -8,6 +9,15 @@ const Header = () => {
 		borderRadius: "5px",
     borderBottom: "2px solid #00796B"
 	  };
+    const {logOut} = useContext(ProfileContext)
+    const handleLogOut =() =>{
+      logOut()
+      .then(()=>{
+  
+      })
+      .catch(error => console.log(error));
+    }
+  
     return (
         <div className="light:bg-white dark:bg-gray-900  light:text-gray-900">
       <div  className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
@@ -98,6 +108,17 @@ const Header = () => {
             
           </ul>
           <ul className="flex items-center hidden space-x-8 lg:flex">
+            <li>
+              <button
+                onClick={handleLogOut}
+                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-m focus:shadow-outline focus:outline-none"
+                aria-label="Sign out"
+                title="Sign out"
+              >
+                LogOut
+              </button>
+            
+            </li>
             <li>
               <Link
                 to="/login"
@@ -247,8 +268,16 @@ const Header = () => {
                         </NavLink>
                       </li>
                       <li>
+                      <button
+                onClick={handleLogOut}
+                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide w-full text-black transition duration-200 rounded shadow-m focus:shadow-outline focus:outline-none"
+                aria-label="Sign out"
+                title="Sign out"
+              >
+                LogOut
+              </button>
                         <Link
-                          href="/login"
+                          to="/login"
                           className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-700 mb-2 md:m-0 hover:bg-teal-500 focus:shadow-outline focus:outline-none"
                           aria-label="Sign up"
                           title="Sign up"
@@ -256,7 +285,7 @@ const Header = () => {
                           LogIn
                         </Link>
                         <Link
-                          href="/register"
+                          to="/register"
                           className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-700 hover:bg-teal-500 focus:shadow-outline focus:outline-none"
                           aria-label="Sign up"
                           title="Sign up"

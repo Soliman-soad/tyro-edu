@@ -63,6 +63,7 @@ const Login = () => {
 				</div>
 				<input type="password" name="password" id="password" placeholder="enter your password" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
 			</div>
+            <p className='text-red-600'>{errorMessage}</p>
 		</div>
         
 		<button type="submit" className="w-full px-8 py-3 font-semibold rounded-md bg-teal-700 text-white">Sign in</button>

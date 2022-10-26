@@ -1,10 +1,20 @@
 import React, { useEffect } from 'react';
+import { useContext } from 'react';
 import { useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import { ProfileContext } from '../context/UserContext';
 import landingImg from '../image/4136918.jpg'
 
 const Home = () => {
 	const courses = useLoaderData()
+	const {logOut} = useContext(ProfileContext)
+	const handleLogOut =() =>{
+		logOut()
+		.then(()=>{
+
+		})
+		.catch(error => console.log(error));
+	}
     
     return (
         <div>

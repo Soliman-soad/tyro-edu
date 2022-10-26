@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import app from '../firebase/firebase.init';
 
 export const ProfileContext =createContext()
@@ -11,7 +11,10 @@ const UserContext = ({children}) => {
     const logIn = (email,password) =>{
         return signInWithEmailAndPassword(auth,email,password)
     }
-    const authInfo ={register,logIn}
+    const logOut = ()=>{
+        return signOut(auth);
+    }
+    const authInfo ={register,logIn,logOut}
     return (
         <ProfileContext.Provider value={authInfo}>
             {children}

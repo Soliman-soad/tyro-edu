@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ProfileContext } from '../../context/UserContext';
@@ -6,6 +6,7 @@ import { ProfileContext } from '../../context/UserContext';
 const Register = () => {
     const {register}=useContext(ProfileContext)
     const navigate = useNavigate()
+    const [errorMessage, setErrorMessage] =useState(null)
     const handleRegister = event =>{
         event.preventDefault();
         const email = event.target.email.value;
@@ -19,7 +20,10 @@ const Register = () => {
             console.log(user);
             navigate('/login')
         })
-        .catch(error => console.error(error))
+        .catch(error => {
+            console.error(error);
+            setErrorMessage(error.message);
+        })
     }
     return (
         <div>
@@ -49,6 +53,7 @@ const Register = () => {
 				</div>
 				<input type="password" name="password" id="password" placeholder="Enter a password" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" required/>
 			</div>
+            <p className='text-red-500'>{errorMessage}</p>
 		</div>
 		<button type="submit" className="w-full px-8 py-3 font-semibold rounded-md bg-teal-700 text-white">Register</button>
 	</form>
