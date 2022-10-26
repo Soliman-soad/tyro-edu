@@ -1,9 +1,18 @@
 import React, { useContext, useState } from 'react';
+import { useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { ProfileContext } from '../../context/UserContext';
 
 const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // this will render category 
+  const [category,setCategory]= useState([])
+  useEffect(()=>{
+    fetch('https://tyro-server.vercel.app/category')
+    .then(res => res.json())
+    .then(data => setCategory(data))
+  },[])
 
   // active is create to show active navbar
 	const activeStyle = {
@@ -292,20 +301,24 @@ const Header = () => {
                       
                       <li>
                         <NavLink
-                          to="/faq"
-                          aria-label="Product pricing"
-                          title="Product pricing"
+                          to="/courses"
+                          aria-label="Our product"
+                          title="Our product"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
 						  style={({ isActive }) =>
 						  isActive ? activeStyle : undefined
 						}
-						>
-                          FAQ
+						end>
+                          All
                         </NavLink>
                       </li>
-                      <li>
+                      {
+                        category.map(categoryData => {
+                          return(
+                            
+                            <li key={categoryData.id}>
                         <NavLink
-                          to="/blog"
+                          to={categoryData.category}
                           aria-label="About us"
                           title="About us"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -313,12 +326,17 @@ const Header = () => {
 						  isActive ? activeStyle : undefined
 						}
 						>
-                          Blog
+                          {categoryData.category}
                         </NavLink>
                       </li>
+                            
+                          )
+                        })
+                      }
+                      
                       <li>
                         <NavLink
-                          to="/about"
+                          to="dashboard"
                           aria-label="About us"
                           title="About us"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -326,9 +344,23 @@ const Header = () => {
 						  isActive ? activeStyle : undefined
 						}
 						>
-                          About
+                          Dashboard
                         </NavLink>
                       </li>
+                      <li>
+                        <NavLink
+                          to="checkout"
+                          aria-label="About us"
+                          title="About us"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+						  style={({ isActive }) =>
+						  isActive ? activeStyle : undefined
+						}
+						>
+                          Get premium access
+                        </NavLink>
+                      </li>
+                      
                       
                     </ul>
                       <li>

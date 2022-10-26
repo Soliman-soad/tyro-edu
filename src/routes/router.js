@@ -12,13 +12,13 @@ import Data from "../pages/coursesPage/Data";
 import Instructor from "../pages/coursesPage/Instructor";
 import Iot from "../pages/coursesPage/Iot";
 import Marketing from "../pages/coursesPage/Marketing";
-import Profile from "../pages/coursesPage/Profile";
 import SingleCourse from "../pages/coursesPage/SingleCourse";
 import Web from "../pages/coursesPage/Web";
 import ErrorPage from "../pages/error/ErrorPage";
 import Faq from "../pages/Faq";
 import Home from "../pages/Home";
 import Checkout from "../pages/private/Checkout";
+import PrivateRouter from "./PrivateRouter";
 
 const router = createBrowserRouter([
     {
@@ -74,10 +74,6 @@ const router = createBrowserRouter([
                     loader: () =>fetch('https://tyro-server.vercel.app/courses')
                 },
                 {
-                    path:'profile',
-                    element:<Profile/>
-                },
-                {
                     path:'dashboard',
                     element:<Dashboard/>
                 },
@@ -87,7 +83,7 @@ const router = createBrowserRouter([
                 },
                 {
                     path:'checkout',
-                    element:<Checkout/>,
+                    element:<PrivateRouter><Checkout/></PrivateRouter>,
                     loader: () =>fetch('https://tyro-server.vercel.app/courses')
                 }
             ]

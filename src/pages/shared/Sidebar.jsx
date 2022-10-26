@@ -51,19 +51,7 @@ const Sidebar = ({category}) => {
                           )
                         })
                       }
-                      <li>
-                        <NavLink
-                          to="profile"
-                          aria-label="Product pricing"
-                          title="Product pricing"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-						  style={({ isActive }) =>
-						  isActive ? activeStyle : undefined
-						}
-						>
-                          Profile
-                        </NavLink>
-                      </li>
+                      
                       <li>
                         <NavLink
                           to="dashboard"
