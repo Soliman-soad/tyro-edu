@@ -10,6 +10,7 @@ import Dashboard from "../pages/coursesPage/Dashboard";
 import Instructor from "../pages/coursesPage/Instructor";
 import Profile from "../pages/coursesPage/Profile";
 import SingleCourse from "../pages/coursesPage/SingleCourse";
+import SpecialBlog from "../pages/coursesPage/SpecialBlog";
 import ErrorPage from "../pages/error/ErrorPage";
 import Faq from "../pages/Faq";
 import Home from "../pages/Home";
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
                 {
                     path:'instructor',
                     element:<Instructor/>
+                },
+                {
+                    path:"specialBlog",
+                    element:<SpecialBlog/>
                 }
             ]
             },
