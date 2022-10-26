@@ -1,16 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import landingImg from '../image/4136918.jpg'
 
 const Home = () => {
-	const courses = useLoaderData();
-	const slide = document.getElementById('slider')
-	const slideLeft = () => {
-        slide.scrollLeft = slide.scrollLeft - 500;
-    }
-    const slideRight = () =>{
-        slide.scrollLeft = slide.scrollLeft + 500;
-    }
+	const courses = useLoaderData()
+    
     return (
         <div>
             
@@ -37,13 +32,13 @@ const Home = () => {
 	<div >
 		<h1 className=' text-3xl p-10 font-bold '>Skill up and develop you career with those courses:</h1>
 	</div>
-		<div id='slider' className='flex flex-col gap-5 justify-center items-center md:flex-row scrollbar-hide overflow-x-scroll h-full w-full'>
+		<div id='slider' className='flex flex-col gap-5 justify-center items-center md:flex-row scrollbar-hide overflow-x-scroll h-full w-11/12 mx-auto'>
 		{
 			courses.map(course => {
 				return (
 					
-					<div className='dark:text-white'>
-						<div key={course.id} className="card border-teal-400 border-2 w-80 h-full bg-base-100 shadow-xl">
+					<div key={course.id} className='dark:text-white'>
+						<div  className="card border-teal-400 border-2 w-80 h-full bg-base-100 shadow-xl">
   <figure><img src={course.img} className="w-full h-48" alt="" /></figure>
   <div className="card-body">
     <h2 className="card-title">{course.name}</h2>
@@ -61,8 +56,8 @@ const Home = () => {
 		</div>
 		<div className="btn-group w-full my-10 ">
             <div className='mx-auto hidden md:block'>
-            <button onClick={ slideLeft} className="btn btn-outline text-teal-700 hover:bg-white hover:text-gray-900">Previous</button>
-            <button onClick={ slideRight} className="btn btn-outline text-teal-700 hover:bg-white hover:text-gray-900">Next</button>
+            <Link to='/courses'  className="btn btn-outline text-teal-700 hover:bg-white hover:text-gray-900">Previous</Link>
+            <Link to='/courses' className="btn btn-outline text-teal-700 hover:bg-white hover:text-gray-900">Next</Link>
             </div>
             </div>
 </section>
