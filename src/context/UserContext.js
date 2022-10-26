@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, updateProfile } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, updateProfile, signInWithPopup } from "firebase/auth";
 import app from '../firebase/firebase.init';
 
 export const ProfileContext =createContext()
@@ -29,8 +29,11 @@ const UserContext = ({children}) => {
             photoURL: img
         })
     }
+    const popUpSignIn = (provider) => {
+        return signInWithPopup(auth,provider)
+    }
 
-    const authInfo ={register,logIn,logOut,user,changeProfile};
+    const authInfo ={register,logIn,logOut,user,changeProfile,popUpSignIn };
     return (
         <ProfileContext.Provider value={authInfo}>
             {children}

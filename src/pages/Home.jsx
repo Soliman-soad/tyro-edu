@@ -5,6 +5,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { ProfileContext } from '../context/UserContext';
 import landingImg from '../image/4136918.jpg'
 
+
 const Home = () => {
 	const courses = useLoaderData()
     
@@ -35,6 +36,7 @@ const Home = () => {
 		<h1 className=' text-3xl p-10 font-bold '>Skill up and develop you career with those courses:</h1>
 	</div>
 		<div id='slider' className='flex flex-col gap-5 justify-center items-center md:grid md:grid-cols-3  h-full w-11/12 mx-auto'>
+		{/* here course data will map and course section will be created */}
 		{
 			courses.map(course => {
 				return (

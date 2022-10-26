@@ -1,8 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { ProfileContext } from '../../context/UserContext';
+// import { CgProfile } from 'react-icons/cg';
+
 const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // active is create to show active navbar
 	const activeStyle = {
 		
 		padding: "5px",
@@ -108,6 +112,12 @@ const Header = () => {
             
           </ul>
           <ul className="flex items-center hidden space-x-8 lg:flex">
+          {
+            user ? 
+            <img alt="" title={user?.email} className="w-10 h-10 rounded-full ring-2 ring-offset-4  ring-teal-400 ring-offset-gray-800" src={user?.photoURL===null ? "https://img.freepik.com/free-vector/mysterious-mafia-man-smoking-cigarette_52683-34828.jpg?w=740&t=st=1666775465~exp=1666776065~hmac=52d3d334805b06451346430374e0d14f56359098935ada58c67bce030d779713" :user?.photoURL } />
+            :
+            <div></div> 
+          }
             {
               user ?
               <>
