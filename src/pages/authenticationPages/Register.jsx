@@ -1,12 +1,14 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ProfileContext } from '../../context/UserContext';
 
 const Register = () => {
     const {register,changeProfile,popUpSignIn}=useContext(ProfileContext)
     const navigate = useNavigate()
+	const location = useLocation()
+  const from = location.state?.from?.pathname || '/';
     const [errorMessage, setErrorMessage] =useState(null)
     const handleRegister = event =>{
         event.preventDefault();
@@ -20,7 +22,7 @@ const Register = () => {
             const user = result.user;
             update(name,img)
             console.log(user);
-            navigate('/')
+			navigate(from,{replace:true})
             
         })
         .catch(error => {
@@ -42,7 +44,7 @@ const Register = () => {
 		.then(result =>{
 			const user =result.user;
 			console.log(user)
-			navigate('/')
+			navigate(from,{replace:true})
 		})
 		.catch(error => console.log(error))
 	}
@@ -51,7 +53,7 @@ const Register = () => {
 		.then(result =>{
 			const user =result.user;
 			console.log(user)
-			navigate('/')
+			navigate(from,{replace:true})
 		})
 		.catch(error => console.log(error))
 	}
