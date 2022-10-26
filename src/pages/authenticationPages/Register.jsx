@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ProfileContext } from '../../context/UserContext';
 
 const Register = () => {
-    const {register}=useContext(ProfileContext)
+    const {register,changeProfile}=useContext(ProfileContext)
     const navigate = useNavigate()
     const [errorMessage, setErrorMessage] =useState(null)
     const handleRegister = event =>{
@@ -17,13 +17,21 @@ const Register = () => {
         register(email,password)
         .then(result => {
             const user = result.user;
+            update(name,img)
             console.log(user);
-            navigate('/login')
+            navigate('/')
+            
         })
         .catch(error => {
             console.error(error);
             setErrorMessage(error.message);
         })
+        
+    }
+    const update = (name,img) =>{
+        changeProfile(name,img)
+        .then(()=>{})
+        .catch(error => console.log(error))
     }
     return (
         <div>
@@ -35,8 +43,8 @@ const Register = () => {
     <form onSubmit={handleRegister}  className="space-y-8 ">
 		<div className="space-y-4">
 			<div className="space-y-2">
-				<label htmlFor="name" className="block text-sm">Name</label>
-				<input type="text" name="name" id="name" placeholder="Enter your name" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
+				<label htmlFor="name" className="block text-sm">Full Name</label>
+				<input type="text" name="name" id="name" placeholder="Enter your full name" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
 			</div>
 			<div className="space-y-2">
 				<label htmlFor="img" className="block text-sm">Image url</label>
