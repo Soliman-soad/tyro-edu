@@ -7,14 +7,6 @@ import landingImg from '../image/4136918.jpg'
 
 const Home = () => {
 	const courses = useLoaderData()
-	const {logOut} = useContext(ProfileContext)
-	const handleLogOut =() =>{
-		logOut()
-		.then(()=>{
-
-		})
-		.catch(error => console.log(error));
-	}
     
     return (
         <div>
@@ -38,11 +30,11 @@ const Home = () => {
 		</div>
 	</div>
 </section>
-<section className='light:bg-slate-800 dark:bg-white dark:text-gray-900'>
+<section className='light:bg-slate-800 py-5 dark:bg-white dark:text-gray-900'>
 	<div >
 		<h1 className=' text-3xl p-10 font-bold '>Skill up and develop you career with those courses:</h1>
 	</div>
-		<div id='slider' className='flex flex-col gap-5 justify-center items-center md:flex-row scrollbar-hide overflow-x-scroll h-full w-11/12 mx-auto'>
+		<div id='slider' className='flex flex-col gap-5 justify-center items-center md:grid md:grid-cols-3  h-full w-11/12 mx-auto'>
 		{
 			courses.map(course => {
 				return (
@@ -64,12 +56,7 @@ const Home = () => {
 			})
 		}
 		</div>
-		<div className="btn-group w-full my-10 ">
-            <div className='mx-auto hidden md:block'>
-            <Link to='/courses'  className="btn btn-outline text-teal-700 hover:bg-white hover:text-gray-900">Previous</Link>
-            <Link to='/courses' className="btn btn-outline text-teal-700 hover:bg-white hover:text-gray-900">Next</Link>
-            </div>
-            </div>
+		
 </section>
 <section>
 	<div className='bg-teal-700 w-full px-36 py-16 text-white'>

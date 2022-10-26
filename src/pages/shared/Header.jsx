@@ -9,7 +9,7 @@ const Header = () => {
 		borderRadius: "5px",
     borderBottom: "2px solid #00796B"
 	  };
-    const {logOut} = useContext(ProfileContext)
+    const {logOut,user} = useContext(ProfileContext)
     const handleLogOut =() =>{
       logOut()
       .then(()=>{
@@ -108,6 +108,9 @@ const Header = () => {
             
           </ul>
           <ul className="flex items-center hidden space-x-8 lg:flex">
+            {
+              user ?
+              <>
             <li>
               <button
                 onClick={handleLogOut}
@@ -119,6 +122,9 @@ const Header = () => {
               </button>
             
             </li>
+              </> 
+              :
+              <>
             <li>
               <Link
                 to="/login"
@@ -139,6 +145,8 @@ const Header = () => {
                 Register
               </Link>
             </li>
+              </>
+            }
           </ul>
           <div className="lg:hidden">
             <button
@@ -268,6 +276,9 @@ const Header = () => {
                         </NavLink>
                       </li>
                       <li>
+                        {
+                          user ?
+
                       <button
                 onClick={handleLogOut}
                 className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide w-full text-black transition duration-200 rounded shadow-m focus:shadow-outline focus:outline-none"
@@ -276,6 +287,8 @@ const Header = () => {
               >
                 LogOut
               </button>
+              :
+              <>
                         <Link
                           to="/login"
                           className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-700 mb-2 md:m-0 hover:bg-teal-500 focus:shadow-outline focus:outline-none"
@@ -292,6 +305,8 @@ const Header = () => {
                         >
                           Register
                         </Link>
+              </>
+                        }
                       </li>
                     </ul>
                   </nav>
