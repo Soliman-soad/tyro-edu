@@ -22,13 +22,13 @@ const Sidebar = () => {
 						  style={({ isActive }) =>
 						  isActive ? activeStyle : undefined
 						}
-						>
+						end>
                           Courses
                         </NavLink>
                       </li>
                       <li>
                         <NavLink
-                          to="/faq"
+                          to="profile"
                           aria-label="Product pricing"
                           title="Product pricing"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -36,7 +36,7 @@ const Sidebar = () => {
 						  isActive ? activeStyle : undefined
 						}
 						>
-                          FAQ
+                          Profile
                         </NavLink>
                       </li>
                       <li>

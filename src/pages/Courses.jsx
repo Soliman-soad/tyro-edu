@@ -6,9 +6,9 @@ const Courses = () => {
     return (
         <div className='grid grid-cols-10 '>
             {/* this section is our sidebar */}
-            <div className='col-span-2 '><Sidebar></Sidebar></div>
+            <div className='md:col-span-2'><Sidebar></Sidebar></div>
             {/* this is our course section */}
-            <div className='col-span-8 pl-10'>
+            <div className='col-span-8 md:pl-10'>
             <Outlet/>
             </div>
         </div>

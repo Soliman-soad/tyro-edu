@@ -5,7 +5,7 @@ const SingleCourse = () => {
     const course = useLoaderData()
     return (
         <div>
-            <div  className=" pt-5  bg-base-100 shadow-xl">
+            <div  className=" pt-5 w-full  bg-base-100 shadow-xl">
   <figure><img src={course.img} className="w-6/12 mx-auto " alt="" /></figure>
   <div className="card-body">
     <h2 className="text-3xl font-bold">{course.name}</h2>

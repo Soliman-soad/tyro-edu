@@ -6,6 +6,7 @@ import Register from "../pages/authenticationPages/Register";
 import Blog from "../pages/Blog";
 import Courses from "../pages/Courses";
 import Course from "../pages/coursesPage/Course";
+import Profile from "../pages/coursesPage/Profile";
 import SingleCourse from "../pages/coursesPage/SingleCourse";
 import ErrorPage from "../pages/error/ErrorPage";
 import Faq from "../pages/Faq";
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
                     loader: ({params}) =>{
                         return fetch(`https://tyro-server.vercel.app/courses/${params.id}`)
                     }
+
+                },
+                {
+                    path:'profile',
+                    element:<Profile/>
                 }
             ]
             },
