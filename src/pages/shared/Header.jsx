@@ -9,7 +9,7 @@ const Header = () => {
     borderBottom: "2px solid #00796B"
 	  };
     return (
-        <div className="bg-gray-900">
+        <div className="light:bg-white dark:bg-gray-900  light:text-gray-900">
       <div  className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="relative flex items-center justify-between">
           <Link
@@ -35,7 +35,7 @@ const Header = () => {
                 to="/"
                 aria-label="Our product"
                 title="Our product"
-                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                className="font-medium tracking-wide  transition-colors duration-200 hover:text-teal-accent-400"
 				style={({ isActive }) =>
 				isActive ? activeStyle : undefined
 			  }
@@ -48,7 +48,7 @@ const Header = () => {
                 to="/courses"
                 aria-label="Our product"
                 title="Our product"
-                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                className="font-medium tracking-wide  transition-colors duration-200 hover:text-teal-accent-400"
 				style={({ isActive }) =>
 				isActive ? activeStyle : undefined
 			  }
@@ -61,7 +61,7 @@ const Header = () => {
                 to="/faq"
                 aria-label="Product pricing"
                 title="Product pricing"
-                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                className="font-medium tracking-wide  transition-colors duration-200 hover:text-teal-accent-400"
 				style={({ isActive }) =>
 				isActive ? activeStyle : undefined
 			  }
@@ -74,7 +74,7 @@ const Header = () => {
                 to="/blog"
                 aria-label="About us"
                 title="About us"
-                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                className="font-medium tracking-wide  transition-colors duration-200 hover:text-teal-accent-400"
 				style={({ isActive }) =>
 				isActive ? activeStyle : undefined
 			  }
@@ -87,7 +87,7 @@ const Header = () => {
                 to="/about"
                 aria-label="About us"
                 title="About us"
-                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                className="font-medium tracking-wide  transition-colors duration-200 hover:text-teal-accent-400"
 				style={({ isActive }) =>
 				isActive ? activeStyle : undefined
 			  }

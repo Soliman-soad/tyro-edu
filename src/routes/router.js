@@ -18,6 +18,7 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element:<Home/>,
+                loader: () =>fetch('https://tyro-server.vercel.app/courses')
             },
             {
                 path:'/courses',
