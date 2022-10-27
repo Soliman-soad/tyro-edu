@@ -1,6 +1,12 @@
 ## Tyro education 
 Tyro education is a learning platform. This website is created by react. And here we use many npm library. Website design is created by tailwind css.
 
+* We have many course that have enroll option.
+* we have login and register option
+* get premium access that you can in if your are register or login.
+* we have blogs option where we have some question answer.
+* we have theme toggle system in our nevbar where you can change theme.
+
 ## Utility that used!
 * React router dom has been used here. we also used private route here.
 * firebase authentication  system has been used.
