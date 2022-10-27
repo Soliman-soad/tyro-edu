@@ -70,7 +70,7 @@ const Home = () => {
 
 
 
-<section className="dark:bg-gray-800 dark:text-gray-100 dark:my-5  bg-white text-gray-900">
+<section className="dark:bg-gray-800 w-full dark:text-gray-100 bg-white text-gray-900">
 	<div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
 		<h1 className="text-4xl font-bold leading-none sm:text-5xl">Want to know about<span className="dark:text-violet-400"> us</span>
 		</h1>
@@ -81,6 +81,21 @@ const Home = () => {
 		</div>
 	</div>
 </section>
+
+<section className="dark:text-gray-800 dark:bg-white p-4 my-5  text-white bg-gray-900">
+	<div className="container flex flex-col mx-auto lg:grid lg:grid-cols-2 items-center">
+		<img className='w-11/12  mx-auto' src="https://img.freepik.com/free-vector/flat-customer-support-illustration_23-2148899114.jpg?w=740&t=st=1666856992~exp=1666857592~hmac=1ca7d8e38a7a527f5edf6dc7fbfabffd3b8b2e285d827e682536dbfb684bc1ce" alt="" />
+		<div className="flex flex-col w-full p-6 lg:w-2/3 md:p-8 lg:p-12">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-8 h-8 mb-8 dark:text-violet-400">
+				<path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+			</svg>
+			<h2 className="text-3xl font-semibold leading-none">Help service</h2>
+			<p className="mt-4 mb-8 text-sm">We have dedicated team to help you 24hours.The tyro-edu help Center will support you as you learn about and give you advices. We also have documentation and videos to answer your questions.</p>
+		</div>
+		
+	</div>
+</section>
+
 <section className="p-6 dark:bg-gray-800 dark:text-gray-100 py-8 bg-white text-gray-900">
 	<div className="container p-4 mx-auto text-center">
 		<h2 className="text-4xl font-bold">Trusted by the industry leaders</h2>

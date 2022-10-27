@@ -2,8 +2,6 @@ import React, { useContext } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import { ProfileContext } from '../../context/UserContext';
 import Instructor from '../coursesPage/Instructor';
-import { FaRegSun } from 'react-icons/fa';
-import { MdDarkMode } from 'react-icons/md';
 
 const Checkout = () => {
     const {user,changeProfile,enroll} = useContext(ProfileContext);
@@ -71,8 +69,8 @@ const Checkout = () => {
 					{
                          courses.map(course=> {
                             return(
-                                <>
-                                <tr className="text-right border-2  dark:border-gray-700 dark:bg-gray-800">
+                                
+                                <tr key={course.id} className="text-right border-2  dark:border-gray-700 dark:bg-gray-800">
                                 <td className="px-3 py-2 text-left">
 						<span>{course.category}</span>
 					</td>
@@ -80,7 +78,7 @@ const Checkout = () => {
 						<span>{course.name}</span>
 					</td>
                        </tr>
-                                </>
+                                
                             )
                         })
                     }

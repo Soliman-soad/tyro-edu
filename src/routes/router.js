@@ -9,7 +9,6 @@ import Ai from "../pages/coursesPage/Ai";
 import Course from "../pages/coursesPage/Course";
 import Dashboard from "../pages/coursesPage/Dashboard";
 import Data from "../pages/coursesPage/Data";
-import Instructor from "../pages/coursesPage/Instructor";
 import Iot from "../pages/coursesPage/Iot";
 import Marketing from "../pages/coursesPage/Marketing";
 import SingleCourse from "../pages/coursesPage/SingleCourse";
@@ -76,10 +75,6 @@ const router = createBrowserRouter([
                 {
                     path:'dashboard',
                     element:<Dashboard/>
-                },
-                {
-                    path:'instructor',
-                    element:<Instructor/>
                 },
                 {
                     path:'checkout',

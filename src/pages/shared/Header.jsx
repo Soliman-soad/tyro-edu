@@ -382,7 +382,10 @@ const Header = () => {
                           Get premium access
                         </NavLink>
                       </li>
-                      
+
+                    <li>
+              <button className='text-xl my-auto bg-teal-600 rounded-full text-white p-3 ' onClick={toggleTheme}>{theme === 'light'?<HiSun/>:<MdDarkMode />}</button>
+            </li>     
                       
                     </ul>
                       <li>
@@ -390,7 +393,7 @@ const Header = () => {
                           user ?
                         <>
                         <div>
-                          <p>{user.email}</p>
+                          <p className='text-gray-900'>{user.email}</p>
                         </div>
                       <button
                 onClick={handleLogOut}
