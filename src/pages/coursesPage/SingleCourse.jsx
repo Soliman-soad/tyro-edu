@@ -12,7 +12,7 @@ const SingleCourse = () => {
     console.log(enroll)
     return (
         <div>
-            <div ref={ref}  className=" pt-5 w-full  bg-base-100 shadow-xl">
+            <div ref={ref}  className=" pt-5 w-full pl-5  bg-white dark:bg-base-100 shadow-xl">
               <div className='flex my-4'>
                 <h2 className="text-3xl font-bold">{course.name}</h2>
                 <Pdf targetRef={ref} filename="code-example.pdf">

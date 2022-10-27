@@ -12,11 +12,11 @@ const Courses = () => {
     .then(data => setCategory(data))
   },[])
     return (
-        <div className='grid grid-cols-10 '>
+        <div className='grid grid-cols-10 bg-white text-gray-900 dark:text-white dark:bg-gray-800'>
             {/* this section is our sidebar */}
             <div className='md:col-span-2'><Sidebar category={category}></Sidebar></div>
             {/* this is our course section */}
-            <div className='col-span-8 md:pl-10'>
+            <div className='col-span-8 '>
             <Outlet/>
             </div>
         </div>

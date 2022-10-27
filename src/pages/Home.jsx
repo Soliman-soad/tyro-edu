@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <div>
             
-            <section className="dark:bg-gray-800 dark:text-gray-100">
+            <section className="dark:bg-gray-800 dark:text-gray-100 bg-white text-gray-900">
 	<div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
 		<div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
 			<img src={landingImg} alt="" className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" />
@@ -70,18 +70,18 @@ const Home = () => {
 
 
 
-<section className="dark:bg-gray-800 dark:text-gray-100 my-8">
+<section className="dark:bg-gray-800 dark:text-gray-100 dark:my-5  bg-white text-gray-900">
 	<div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
 		<h1 className="text-4xl font-bold leading-none sm:text-5xl">Want to know about<span className="dark:text-violet-400"> us</span>
 		</h1>
 		<p className="px-8 mt-8 mb-12 text-lg">people learning for professional development report career benefits like getting a promotion, a raise, or starting a new career</p>
 		<div className="flex flex-wrap justify-center">
-			<button className="px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-teal-700 text-white"> <Link to='about'>About us</Link> </button>
+			<button className="px-8 py-3 m-2 text-lg font-semibold rounded bg-teal-700 text-white"> <Link to='about'>About us</Link> </button>
 			
 		</div>
 	</div>
 </section>
-<section className="p-6 dark:bg-gray-800 dark:text-gray-100 my-8">
+<section className="p-6 dark:bg-gray-800 dark:text-gray-100 py-8 bg-white text-gray-900">
 	<div className="container p-4 mx-auto text-center">
 		<h2 className="text-4xl font-bold">Trusted by the industry leaders</h2>
 	</div>

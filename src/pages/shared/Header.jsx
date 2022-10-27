@@ -2,9 +2,28 @@ import React, { useContext, useState } from 'react';
 import { useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { ProfileContext } from '../../context/UserContext';
+import { HiSun } from 'react-icons/hi';
+import { MdDarkMode } from 'react-icons/md';
+
+
 
 const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  // toggle theme 
+  const [theme,setTheme] = useState('light');
+
+  useEffect(()=>{
+    if(theme==='dark'){
+      document.documentElement.classList.add('dark')
+    }else{
+      document.documentElement.classList.remove('dark')
+    }
+  },[theme])
+
+  const toggleTheme = () =>{
+    setTheme(theme==='dark'? 'light':'dark')
+  }
 
   // this will render category 
   const [category,setCategory]= useState([])
@@ -31,7 +50,7 @@ const Header = () => {
     }
   
     return (
-        <div className="light:bg-white dark:bg-gray-900 md:relative sticky  z-50 light:text-gray-900">
+        <div className="bg-white dark:bg-gray-900 md:relative sticky  z-50 dark:text-white text-gray-900 shadow-md">
       <div  className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="relative flex items-center justify-between">
           <Link
@@ -118,6 +137,9 @@ const Header = () => {
               </NavLink>
             </li>
             
+            <li>
+              <button className='text-xl my-auto bg-teal-600 rounded-full text-white p-3 ' onClick={toggleTheme}>{theme === 'light'?<HiSun/>:<MdDarkMode />}</button>
+            </li>
           </ul>
           <ul className="flex items-center hidden space-x-8 lg:flex">
             {/* this section will add user profile picture */}
@@ -134,7 +156,7 @@ const Header = () => {
             <li>
               <button
                 onClick={handleLogOut}
-                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-m focus:shadow-outline focus:outline-none"
+                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide transition duration-200 rounded shadow-m focus:shadow-outline focus:outline-none"
                 aria-label="Sign out"
                 title="Sign out"
               >

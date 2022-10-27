@@ -2,8 +2,8 @@ import React from 'react';
 import Developer from '../image/myless.jpg'
 const About = () => {
     return (
-        <div className='w-full h-screen flex justify-center items-center dark:bg-gray-900'>
-                <div className="flex flex-col justify-center max-w-md p-6  sm:px-12  dark:text-gray-100">
+        <div className='w-full h-screen flex justify-center items-center bg-white dark:bg-gray-900'>
+                <div className="flex flex-col justify-center max-w-md p-6  sm:px-12 text-gray-900  dark:text-gray-100">
         <img src={Developer} alt="" className="w-48 h-48 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
         <div className="space-y-4 text-center divide-y divide-gray-700">
             <div className="my-2 space-y-1">

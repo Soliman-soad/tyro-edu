@@ -13,8 +13,8 @@ const Course = () => {
 			courses.map(course => {
 				return (
 					
-					<div key={course.id} className='dark:text-white'>
-						<div  className="card border-teal-400 border-2 w-80 h-full bg-base-100 shadow-xl">
+					<div key={course.id} className='dark:text-white text-gray-900'>
+						<div  className="card border-teal-400 border-2 w-80 h-full dark:bg-base-100 bg-white shadow-xl">
   <figure><img src={course.img} className="w-full h-48" alt="" /></figure>
   <div className="card-body">
     <h2 className="card-title">{course.name}</h2>

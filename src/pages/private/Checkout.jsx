@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import { ProfileContext } from '../../context/UserContext';
+import Instructor from '../coursesPage/Instructor';
+import { FaRegSun } from 'react-icons/fa';
+import { MdDarkMode } from 'react-icons/md';
 
 const Checkout = () => {
     const {user,changeProfile,enroll} = useContext(ProfileContext);
@@ -52,16 +55,16 @@ const Checkout = () => {
             </form>
 		</div>
 	</div>
-</div>
+			</div>
         <div>
         <div className="container p-2 mx-auto rounded-md sm:p-4 dark:text-gray-100 dark:bg-gray-900">
-	<h2 className="mb-3 text-2xl font-semibold leading-tight">Your Enroll courses</h2>
+	<h2 className="mb-3 text-2xl font-semibold leading-tight">Your Enroll courses {courses.length}</h2>
 	<div className="overflow-x-auto">
 		<table className="min-w-full text-xs">
 			<thead className="rounded-t-lg dark:bg-gray-700">
 				<tr className="text-right">
-					<th title="Ranking" className="p-3 text-left">category</th>
-					<th title="name" className="p-3 text-left">title</th>
+					<th title="Ranking" className="p-3 text-left border-2">category</th>
+					<th title="name" className="p-3 text-left border-2">title</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -69,7 +72,7 @@ const Checkout = () => {
                          courses.map(course=> {
                             return(
                                 <>
-                                <tr className="text-right border-b border-opacity-20 dark:border-gray-700 dark:bg-gray-800">
+                                <tr className="text-right border-2  dark:border-gray-700 dark:bg-gray-800">
                                 <td className="px-3 py-2 text-left">
 						<span>{course.category}</span>
 					</td>
@@ -87,6 +90,9 @@ const Checkout = () => {
 	</div>
 </div>
         </div>
+		<div>
+					<Instructor/>
+		</div>
         </div>
     );
 };
