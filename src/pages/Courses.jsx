@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import Sidebar from './shared/Sidebar'
 
 const Courses = () => {
@@ -18,6 +19,18 @@ const Courses = () => {
             {/* this is our course section */}
             <div className='col-span-8 '>
             <Outlet/>
+            <ToastContainer
+position="top-center"
+autoClose={1000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="dark"
+/>
             </div>
         </div>
     );

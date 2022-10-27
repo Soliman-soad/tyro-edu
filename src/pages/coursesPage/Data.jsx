@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 
+
 const Data = () => {
     const coursesData = useLoaderData()
     const courses = coursesData.filter(data => data.category ==='Data')

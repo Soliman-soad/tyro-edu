@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import SingleCourse from './SingleCourse';
 
+
 const Course = () => {
   const courses = useLoaderData()
   console.log(courses)

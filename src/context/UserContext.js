@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, updateProfile, signInWithPopup } from "firebase/auth";
 import app from '../firebase/firebase.init';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const ProfileContext =createContext()
 const auth =getAuth(app);
@@ -45,7 +46,7 @@ const UserContext = ({children}) => {
     }
     // course enroll data 
     const [enroll,setEnroll] = useState([])
-
+    
     const authInfo ={register,logIn,logOut,user,changeProfile,popUpSignIn,enroll,setEnroll ,loading};
     return (
         <ProfileContext.Provider value={authInfo}>
