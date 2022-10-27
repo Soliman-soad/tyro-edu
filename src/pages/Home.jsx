@@ -61,7 +61,7 @@ const Home = () => {
 		
 </section>
 <section>
-	<div className='bg-teal-700 w-full px-36 py-16 text-white'>
+	<div className='bg-teal-700 w-full px-36 py-16 text-white hidden md:block'>
 		<h1 className='text-4xl'>Join now and get discount voucher up to 20% </h1>
 		<p className='mb-3'>winter discount is on going enroll any of our any course and get 20% discount now</p>
 		<div className='flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start'><Link rel="noopener noreferrer" to="courses" className="px-8 py-3 text-lg font-semibold text-teal-900 rounded bg-white">Register Now</Link></div>
