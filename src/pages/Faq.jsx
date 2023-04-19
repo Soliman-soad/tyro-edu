@@ -3,9 +3,9 @@ import React from 'react';
 const Faq = () => {
     return (
     
-        <div className='dark:bg-gray-800 bg-white h-screen p-5'>
+        <div className=' min-h-screen p-5 bg-white text-gray-800 pb-10'>
             {/* ----- */}
-            <section className="bg-gray-100 text-gray-800 dark:text-white ">
+            <section className="bg-gray-100 ">
 	<div className="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
 		<h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">Frequently Asked Questions</h2>
 		<div className="divide-y divide-gray-300">

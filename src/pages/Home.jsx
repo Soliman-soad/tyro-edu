@@ -8,6 +8,16 @@ import landingImg from '../image/4136918.jpg'
 
 const Home = () => {
 	const courses = useLoaderData()
+
+	if(!courses){
+		return(<div className='min-h-screen flex items-center justify-center'>
+		<div className="flex items-center justify-center space-x-2">
+	<div className="w-4 h-4 rounded-full animate-pulse bg-green-600"></div>
+	<div className="w-4 h-4 rounded-full animate-pulse bg-green-600"></div>
+	<div className="w-4 h-4 rounded-full animate-pulse bg-green-600"></div>
+</div>
+	</div>)
+	}
     
     return (
         <div>

@@ -12,8 +12,18 @@ const Courses = () => {
     .then(res => res.json())
     .then(data => setCategory(data))
   },[])
+
+  if(category.length === 0){
+    return(<div className='min-h-screen flex items-center justify-center'>
+		<div className="flex items-center justify-center space-x-2">
+	<div className="w-4 h-4 rounded-full animate-pulse bg-green-600"></div>
+	<div className="w-4 h-4 rounded-full animate-pulse bg-green-600"></div>
+	<div className="w-4 h-4 rounded-full animate-pulse bg-green-600"></div>
+</div>
+	</div>)
+  }
     return (
-        <div className='grid grid-cols-10 bg-white text-gray-900 dark:text-white dark:bg-gray-800'>
+        <div className='grid grid-cols-10 bg-white text-gray-900 dark:text-white dark:bg-gray-800 pb-16'>
             {/* this section is our sidebar */}
             <div className='md:col-span-2'><Sidebar category={category}></Sidebar></div>
             {/* this is our course section */}
