@@ -4,7 +4,7 @@ const Blog = () => {
     return (
         <>
         {/* ------ */}
-        <div className="p-5 mx-auto sm:p-10 md:p-16 bg-gray-100 text-gray-800">
+        <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-800 bg-white text-gray-800 dark:text-white">
 	<div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
 		<img src="https://img.freepik.com/free-photo/young-network-engineer-with-ethernet-wires-medium-shot_23-2148323470.jpg?size=626&ext=jpg&ga=GA1.1.31902201.1666701009&semt=robertav1_2_sidr" alt="" className="w-full h-60 sm:h-96 bg-gray-500" />
 		<div className="p-6 pb-12 m-4 mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md bg-gray-50">
