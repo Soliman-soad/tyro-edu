@@ -6,10 +6,10 @@ const Blog = () => {
         {/* ------ */}
         <div className="p-5 mx-auto sm:p-10 md:p-16 bg-gray-100 text-gray-800">
 	<div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
-		<img src="https://source.unsplash.com/random/480x360" alt="" className="w-full h-60 sm:h-96 bg-gray-500" />
+		<img src="https://img.freepik.com/free-photo/young-network-engineer-with-ethernet-wires-medium-shot_23-2148323470.jpg?size=626&ext=jpg&ga=GA1.1.31902201.1666701009&semt=robertav1_2_sidr" alt="" className="w-full h-60 sm:h-96 bg-gray-500" />
 		<div className="p-6 pb-12 m-4 mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md bg-gray-50">
 			<div className="space-y-2">
-				<a rel="noopener noreferrer" href="#" className="inline-block text-2xl font-semibold sm:text-3xl">what is cors?</a>
+				<h2 rel="noopener noreferrer" href="#" className="inline-block text-2xl font-semibold sm:text-3xl">what is cors?</h2>
 				<p className="text-xs text-gray-600">By
 					<span className="text-xs hover:underline">Soliman Alam</span>
 				</p>
@@ -25,7 +25,7 @@ const Blog = () => {
         {/* -------- */}
         <div className="bg-gray-100 text-gray-900">
 	<div className="container grid grid-cols-12 mx-auto bg-gray-50">
-		<div className="bg-no-repeat bg-cover bg-gray-700 col-span-full lg:col-span-4" style="background-image: url('https://source.unsplash.com/random/640x480'); background-position: center center; background-blend-mode: multiply; background-size: cover;"></div>
+		<div className="bg-no-repeat bg-cover bg-gray-700 col-span-full lg:col-span-4" style="background-image: url('https://img.freepik.com/free-photo/programming-background-concept_23-2150170125.jpg?size=626&ext=jpg&ga=GA1.1.31902201.1666701009&semt=robertav1_2_sidr'); background-position: center center; background-blend-mode: multiply; background-size: cover;"></div>
 		<div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
 			<div className="flex justify-start">
 				<span className="px-2 py-1 text-xs rounded-full bg-teal-600 text-gray-50">Firebase</span>
@@ -50,7 +50,7 @@ const Blog = () => {
         {/* -------- */}
         <div className="bg-gray-100 text-gray-900">
 	<div className="container grid grid-cols-12 mx-auto bg-gray-50">
-		<div className="bg-no-repeat bg-cover bg-gray-700 col-span-full lg:col-span-4" style="background-image: url('https://source.unsplash.com/random/640x480'); background-position: center center; background-blend-mode: multiply; background-size: cover;"></div>
+		<div className="bg-no-repeat bg-cover bg-gray-700 col-span-full lg:col-span-4" style="background-image: url('https://img.freepik.com/free-photo/programming-background-collage_23-2149901771.jpg?size=626&ext=jpg&ga=GA1.1.31902201.1666701009&semt=robertav1_2_sidr'); background-position: center center; background-blend-mode: multiply; background-size: cover;"></div>
 		<div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
 			<div className="flex justify-start">
 				<span className="px-2 py-1 text-xs rounded-full bg-teal-600 text-gray-50">Route</span>
@@ -74,7 +74,7 @@ const Blog = () => {
         {/* -------- */}
         <div className="bg-gray-100 text-gray-900">
 	<div className="container grid grid-cols-12 mx-auto bg-gray-50">
-		<div className="bg-no-repeat bg-cover bg-gray-700 col-span-full lg:col-span-4" style="background-image: url('https://source.unsplash.com/random/640x480'); background-position: center center; background-blend-mode: multiply; background-size: cover;"></div>
+		<div className="bg-no-repeat bg-cover bg-gray-700 col-span-full lg:col-span-4" style="background-image: url('https://img.freepik.com/free-photo/programming-background-collage_23-2149901787.jpg?size=626&ext=jpg&ga=GA1.1.31902201.1666701009&semt=robertav1_2_sidr'); background-position: center center; background-blend-mode: multiply; background-size: cover;"></div>
 		<div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
 			<div className="flex justify-start">
 				<span className="px-2 py-1 text-xs rounded-full bg-teal-600 text-gray-50">Node</span>
