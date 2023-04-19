@@ -143,10 +143,6 @@ const Home = () => {
 		</div>
 	</div>
 </section>
-<footer className='p-24 text-white  bg-slate-900 text-center'>
-	copy right belongs to MD Soliman Alam soad
-</footer>
-
         </div>
     );
 };
